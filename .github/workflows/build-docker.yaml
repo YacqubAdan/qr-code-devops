@@ -1,11 +1,11 @@
 name: Build and Publish image to Docker Hub
 on:
-    push:
-      branches:
-        - main
-      paths:
-        - 'api/Dockerfile'
-        - 'front-end-nextjs/Dockerfile'
+  push:
+    branches:
+      - main
+    paths:
+      - 'api/Dockerfile'
+      - 'front-end-nextjs/Dockerfile'
 jobs:
     publish_images:
         runs-on: ubuntu-latest
