@@ -36,6 +36,10 @@ The front-end code exits in the `front-end-nextjs` directory. You can run the fr
 - Your Front-end Server should be running on `http://localhost:3000`
 
 
+### CI/CD
+
+This repository contains a GitHub Actions workflow that automates the process of building and publishing Docker images to the Hub.
+
 ## Goal
 
 The goal is to get hands-on with DevOps practices like Containerization, CICD and monitoring.
