@@ -8,8 +8,11 @@ jobs:
             - name: checkout
               uses: actions/checkout@v4
             - name: build image
-              run: docker build ./api/ -t yacquubadan/qr-code-devops-api:latest
+              run: | 
+                docker build ./api/ -t yacquubadan/qr-code-devops-api:latest
+                docker build ./front-end-nextjs/ -t yacquubadan/qr-code-devops-frontend:latest
             - name: push image to docker hub
               run: |
                 docker login -u yacquubadan -p ${{ secrets.DOCKER_HUB_TOKEN }}
                 docker push yacquubadan/qr-code-devops-api:latest
+                docker push yacquubadan/qr-code-devops-frontend:latest
